@@ -30,4 +30,9 @@ public final class Cell {
 			);
 	}
 
+	@Override
+	public String toString() {
+		return "Cell [x=" + x + ", y=" + y + "]";
+	}
+
 }
