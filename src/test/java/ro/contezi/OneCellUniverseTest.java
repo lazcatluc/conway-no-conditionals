@@ -24,7 +24,6 @@ public class OneCellUniverseTest {
 		assertThat(universeWith(Cell.at(0, 0)).getCells()).contains(Cell.at(0, 0));
 	}
 	
-	
 	@Test
 	public void universeWithOneCellHasNoNeighbors() throws Exception {
 		assertThat(universeWith(Cell.at(0, 0)).findNeighborsOf(Cell.at(0, 0))).isEmpty();
