@@ -10,8 +10,8 @@ public class UniverseTest {
 		assertThat(evolve(emptyUniverse())).isEqualTo(emptyUniverse());
 	}
 
-	private Object evolve(Universe emptyUniverse) {
-		return emptyUniverse;
+	private Universe evolve(Universe universe) {
+		return universe;
 	}
 
 	private Universe emptyUniverse() {
