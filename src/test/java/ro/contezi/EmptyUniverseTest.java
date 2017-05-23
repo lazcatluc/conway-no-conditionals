@@ -16,12 +16,12 @@ public class EmptyUniverseTest {
 	
 	@Test
 	public void emptyUniverseRemainsEmpty() throws Exception {
-		assertThat(evolver.evolve(Universe.EMPTY)).isEqualTo(Universe.EMPTY);
+		assertThat(evolver.evolve(new Universe()).getCells()).isEmpty();
 	}
 	
 	@Test
 	public void emptyUniverseDoesNotContainCell() throws Exception {
-		assertThat(Universe.EMPTY.getCells()).doesNotContain(Cell.at(0, 0));
+		assertThat(new Universe().getCells()).doesNotContain(Cell.at(0, 0));
 	}
 
 }

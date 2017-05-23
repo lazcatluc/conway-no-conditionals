@@ -6,8 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Universe {
-	static final Universe EMPTY = new Universe();
-
+	
 	private final Set<Cell> cells;
 	
 	public Universe(Cell... cells) {

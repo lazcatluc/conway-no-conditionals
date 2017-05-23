@@ -16,7 +16,7 @@ public class OneCellUniverseTest {
 	
 	@Test
 	public void universeWithOneCellEvolvesToEmpty() throws Exception {
-		assertThat(evolver.evolve(universeWith(Cell.at(0, 0)))).isEqualTo(Universe.EMPTY);
+		assertThat(evolver.evolve(universeWith(Cell.at(0, 0))).getCells()).isEmpty();
 	}
 	
 	@Test
