@@ -1,6 +1,7 @@
 package ro.contezi;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ public class Universe {
 		this.cells = new HashSet<>(Arrays.asList(cells));
 	}
 
-	public boolean contains(Cell cell) {
-		return cells.contains(cell);
+	public Set<Cell> getCells() {
+		return Collections.unmodifiableSet(cells);
 	}
 }
