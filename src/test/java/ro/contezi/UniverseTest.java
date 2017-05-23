@@ -12,18 +12,18 @@ public class UniverseTest {
 	
 	@Test
 	public void universeWithOneCellEvolvesToEmpty() throws Exception {
-		assertThat(evolve(universeWith(new Cell()))).isEqualTo(Universe.EMPTY);
+		assertThat(evolve(universeWith(Cell.at(0, 0)))).isEqualTo(Universe.EMPTY);
 	}
 	
 	@Test
 	public void universeWithOneCellContainsCell() throws Exception {
-		final Cell cell = new Cell();
+		final Cell cell = Cell.at(0, 0);
 		assertThat(universeWith(cell).getCells()).contains(cell);
 	}
 	
 	@Test
 	public void emptyUniverseDoesNotContainCell() throws Exception {
-		assertThat(Universe.EMPTY.getCells()).doesNotContain(new Cell());
+		assertThat(Universe.EMPTY.getCells()).doesNotContain(Cell.at(0, 0));
 	}
 
 	private Universe universeWith(Cell cell) {
