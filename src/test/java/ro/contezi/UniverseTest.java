@@ -1,6 +1,7 @@
 package ro.contezi;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -20,12 +21,17 @@ public class UniverseTest {
 		final Cell cell = new Cell();
 		assertThat(universeWith(cell).contains(cell)).isTrue();
 	}
+	
+	@Test
+	public void emptyUniverseDoesNotContainCell() throws Exception {
+		assertThat(Universe.EMPTY.contains(new Cell())).isFalse();
+	}
 
 	private Universe universeWith(Cell cell) {
-		return Universe.EMPTY;
+		return new Universe(cell);
 	}
 
 	private Universe evolve(Universe universe) {
-		return universe;
+		return Universe.EMPTY;
 	}
 }
