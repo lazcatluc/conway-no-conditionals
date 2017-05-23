@@ -14,6 +14,12 @@ public class UniverseTest {
 	public void universeWithOneCellEvolvesToEmpty() throws Exception {
 		assertThat(evolve(universeWith(new Cell()))).isEqualTo(Universe.EMPTY);
 	}
+	
+	@Test
+	public void universeWithOneCellContainsCell() throws Exception {
+		final Cell cell = new Cell();
+		assertThat(universeWith(cell).contains(cell)).isTrue();
+	}
 
 	private Universe universeWith(Cell cell) {
 		return Universe.EMPTY;
